@@ -1,15 +1,18 @@
 import json
-from agents.a0_intake.handler import handler
+from agents.a0_intake.handler import handler as a0_handler
+from agents.a1_context.handler import handler as a1_handler
 
-# Load sample transactions
+# Load transaction
 with open("data/sample_transactions.json") as f:
     transactions = json.load(f)
 
-# Take first transaction
 transaction = transactions[0]
 
 # Run A0
-result = handler(transaction)
+a0_result = a0_handler(transaction)
 
-print("A0 OUTPUT:")
-print(json.dumps(result, indent=2))
+# Run A1
+a1_result = a1_handler(a0_result)
+
+print("FINAL OUTPUT:")
+print(json.dumps(a1_result, indent=2))
