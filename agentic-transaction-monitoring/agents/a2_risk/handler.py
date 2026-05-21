@@ -44,7 +44,7 @@ def calculate_confidence(context):
     if customer["kycStatus"] == "VERIFIED":
         return 0.9
     else:
-        return 0.6
+        return 0.5
 
 
 def handler(a1_output):

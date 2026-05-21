@@ -1,8 +1,8 @@
 [
   {
     "accountId": "acc_123",
-    "kycStatus": "VERIFIED",
-    "accountAgeDays": 200,
+    "kycStatus": "UNKNOWN",
+    "accountAgeDays": 14,
     "avgTransactionAmount": 12000,
     "riskSegment": "MEDIUM"
   }
