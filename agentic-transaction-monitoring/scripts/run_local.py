@@ -3,6 +3,7 @@ from agents.a0_intake.handler import handler as a0_handler
 from agents.a1_context.handler import handler as a1_handler
 from agents.a2_risk.handler import handler as a2_handler
 from agents.a3_policy.handler import handler as a3_handler
+from agents.a4_case.handler import handler as a4_handler
 
 # Load transaction
 with open("data/sample_transactions.json") as f:
@@ -22,5 +23,8 @@ a2_result = a2_handler(a1_result)
 # A3
 a3_result = a3_handler(a2_result)
 
+# A4
+a4_result = a4_handler(a3_result)
+
 print("FINAL OUTPUT:")
-print(json.dumps(a3_result, indent=2))
+print(json.dumps(a4_result, indent=2))
